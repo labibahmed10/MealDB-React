@@ -1,4 +1,43 @@
+.food-info {
+  border: 2px solid #789395;
+  padding: 10px 8px;
+  border-radius: 8px;
+}
+
 .food-info img {
   width: 400px;
   height: 400px;
+  border-radius: 8px;
+}
+
+.food-info h1,
+h2 {
+  margin: 0;
+}
+
+.food-info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.food-info h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.food-info p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.food-info button {
+  padding: 10px 20px;
+  border: 0;
+  background-color: rgb(47, 163, 125);
+  color: aliceblue;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
 }
