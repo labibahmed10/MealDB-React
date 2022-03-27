@@ -6,7 +6,7 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Meals = ({ meal }) => {
   console.log(meal);
-  const { strMealThumb, strArea, strCategory, strMeal, strInstructions } = meal;
+  const { strMealThumb, strArea, strMeal, strInstructions } = meal;
   return (
     <div className="food-info">
       <img src={strMealThumb} alt="" />
