@@ -4,8 +4,7 @@ import "./Meals.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
-const Meals = ({ meal }) => {
-  console.log(meal);
+const Meals = ({ meal, handleAddToCart }) => {
   const { strMealThumb, strArea, strMeal, strInstructions } = meal;
   return (
     <div className="food-info">
@@ -14,7 +13,7 @@ const Meals = ({ meal }) => {
       <h2>{strMeal}</h2>
       <p>{strInstructions.length > 30 ? strInstructions.slice(0, 130) : strInstructions}</p>
 
-      <button>
+      <button onClick={() => handleAddToCart(meal)}>
         Add to Cart <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
       </button>
     </div>

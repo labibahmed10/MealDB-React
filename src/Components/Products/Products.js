@@ -12,16 +12,24 @@ const Products = () => {
       .then((data) => setmeals(data.meals));
   }, []);
 
+  //cart state
+
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (indiProduct) => {
+    setCart([...cart, indiProduct]);
+  };
+
   return (
     <section className="main-container">
       <div className="food-display">
         {meals.map((meal) => (
-          <Meals meal={meal}></Meals>
+          <Meals key={meal.idMeal} meal={meal} handleAddToCart={handleAddToCart}></Meals>
         ))}
       </div>
 
       <div className="cart-site">
-        <Cart></Cart>
+        <Cart cart={cart}></Cart>
       </div>
     </section>
   );
