@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 import image from "../../images/ecommerce-logo-png-11.jpg";
 import Meals from "../Meals/Meals";
+import { Outlet } from "react-router-dom";
 
 const Header = () => {
   const [searchText, setSearchText] = useState("");
@@ -20,11 +21,11 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="navbar">
+      <nav className="navbar ">
         <img className="w-32" src={image} alt="" />
 
         <div>
-          <input onChange={searchHandler} className="py-2 px-3 rounded-sm mr-3" type="search" />
+          <input onChange={searchHandler} className="ml-12 py-2 px-3 rounded-sm mr-3" type="search" />
           <button className="p-2 rounded-md bg-indigo-400 text-white hover:text-slate-500">Search</button>
         </div>
         <ul>
@@ -43,10 +44,11 @@ const Header = () => {
         </ul>
       </nav>
 
-      <section className="grid grid-cols-5">
+      <section className="grid md:grid-cols-5 grid-cols-1 gap-2 p-3">
         {meals.map((meal) => (
           <Meals key={meal.idMeal} meal={meal}></Meals>
         ))}
+        {/* <Outlet></Outlet> */}
       </section>
     </header>
   );
