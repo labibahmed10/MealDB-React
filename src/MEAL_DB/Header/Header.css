@@ -1,12 +1,9 @@
 .navbar {
-  background-color: #789395;
-  padding: 10px 20px;
+  background-color: #93b5c6;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar img {
 }
 
 .navbar ul {
@@ -16,13 +13,12 @@
 
 .navbar li {
   list-style: none;
-
-  margin-right: 25px;
-  font-size: 1.3rem;
+  margin-right: 10px;
+  font-size: 1.1rem;
 }
 
 .navbar li a {
   text-decoration: none;
-  color: aliceblue;
-  padding: 8px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
 }
